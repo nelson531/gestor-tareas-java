@@ -29,8 +29,7 @@ public class Main {
                     System.out.println("\n🔨 Funcionalidad 'Agregar tarea' en desarrollo...");
                     break;
                 case 2:
-                    // TODO: Implementar por Miembro 2
-                    System.out.println("\n🔨 Funcionalidad 'Listar tareas' en desarrollo...");
+                    gestor.listarTareas();
                     break;
                 case 3:
                     // TODO: Implementar por Miembro 3
