@@ -55,8 +55,25 @@ public class Main {
                     gestor.listarTareas();
                     break;
                 case 3:
-                    // TODO: Implementar por Miembro 3
-                    System.out.println("\n🔨 Funcionalidad 'Marcar completada' en desarrollo...");
+                    System.out.println("\n✔️ MARCAR TAREA COMO COMPLETADA");
+                    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+
+                    // Mostrar lista primero para que el usuario vea los índices
+                    gestor.listarTareas();
+
+                    // Verificar si hay tareas
+                    if (gestor.getTareas().isEmpty()) {
+                        break;
+                    }
+
+                    // Pedir índice
+                    System.out.print("\nÍndice de la tarea a completar: ");
+                    try {
+                        int indice = Integer.parseInt(scanner.nextLine());
+                        gestor.marcarCompletada(indice);
+                    } catch (NumberFormatException e) {
+                        System.out.println("❌ Debes ingresar un número válido");
+                    }
                     break;
                 case 4:
                     System.out.println("\n🗑️ ELIMINAR TAREA");
