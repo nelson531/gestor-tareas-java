@@ -37,8 +37,25 @@ public class Main {
                     System.out.println("\n🔨 Funcionalidad 'Marcar completada' en desarrollo...");
                     break;
                 case 4:
-                    // TODO: Implementar por Miembro 4
-                    System.out.println("\n🔨 Funcionalidad 'Eliminar tarea' en desarrollo...");
+                    System.out.println("\n🗑️ ELIMINAR TAREA");
+                    System.out.println("━━━━━━━━━━━━━━━━━━━━");
+
+                    // Mostrar lista primero
+                    gestor.listarTareas();
+
+                    // Verificar si hay tareas
+                    if (gestor.getTareas().isEmpty()) {
+                        break;
+                    }
+
+                    // Pedir índice
+                    System.out.print("\nÍndice de la tarea a eliminar: ");
+                    try {
+                        int indice = Integer.parseInt(scanner.nextLine());
+                        gestor.eliminarTarea(indice);
+                    } catch (NumberFormatException e) {
+                        System.out.println("❌ Debes ingresar un número válido");
+                    }
                     break;
                 case 5:
                     System.out.println("\n💾 Guardando tareas...");
